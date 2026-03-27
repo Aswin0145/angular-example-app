@@ -18,4 +18,4 @@ jobs:
       - name: Install packages
         run: sudo pip install --extra-index-url https://test.pypi.org/simple/ boman-cli-uat
       - name: Run scan  
-        run: sudo boman-cli-uat -a run -u https://9509-2409-4090-b02b-e438-c5ad-2993-6b0a-145f.ngrok-free.app -at 03224575-5ccb-493a-893a-962d30a57b9b -ct 4941f85a-5453-4f94-9247-d5565b4bd116
+        run: sudo boman-cli-uat -a run -u https://hexangular-kristian-leptodactylous.ngrok-free.dev -at 03224575-5ccb-493a-893a-962d30a57b9b -ct 4941f85a-5453-4f94-9247-d5565b4bd116
