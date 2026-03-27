@@ -1,0 +1,21 @@
+# This is a basic workflow to help you get started with boman.ai
+
+name: Bomanai Scanner Local
+on:
+  # Allows you to run this workflow manually from the Actions tab
+  workflow_dispatch:
+
+# A workflow run is made up of one or more jobs that can run sequentially or in parallel
+jobs:
+  Boman-scan:
+    # The type of runner that the job will run on
+    runs-on: ubuntu-latest
+    steps:
+      # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
+      - uses: actions/checkout@v2
+      
+      # Runs a single command using the runners shell
+      - name: Install packages
+        run: sudo pip install --extra-index-url https://test.pypi.org/simple/ boman-cli-uat
+      - name: Run scan  
+        run: sudo boman-cli-uat -a run -u https://9509-2409-4090-b02b-e438-c5ad-2993-6b0a-145f.ngrok-free.app -at 03224575-5ccb-493a-893a-962d30a57b9b -ct 4941f85a-5453-4f94-9247-d5565b4bd116
